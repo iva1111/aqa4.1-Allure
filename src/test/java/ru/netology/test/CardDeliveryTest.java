@@ -24,6 +24,7 @@ class CardDeliveryTest {
     @BeforeEach
     void setUp() {
         open("http://localhost:9999");
+        registrationByCardInfo = DataGenerator.Registration.generateByCard("ru");
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
